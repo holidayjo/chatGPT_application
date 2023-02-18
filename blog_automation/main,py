@@ -1,2 +1,7 @@
 import openai
+import csv
+import yaml
+import utils
 
+yaml_path = 'config.yaml'
+cfg       = utils.open_config_file(yaml_path)
