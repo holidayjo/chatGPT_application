@@ -7,5 +7,5 @@ import os
 
 dotenv.load_dotenv(verbose=True) # if there is a missing file, show the warning.
 
-cfg = os.getenv('OpenAI_API_KEY')
+cfg = os.environ['PAPAGO_SECRET']
 print(cfg)
