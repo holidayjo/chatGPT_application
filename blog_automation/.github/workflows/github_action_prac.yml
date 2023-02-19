@@ -1,0 +1,11 @@
+name: Github Actions Secret Example
+
+on:
+  push:
+    branches: [main]
+jobs:
+  secrets-in-github-actions:
+    runs-on: windows-latest
+
+
+
