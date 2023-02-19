@@ -27,7 +27,7 @@ def translator(text):
     else:
         print('Error Code: ', response)
 
-def article_generator(words, num_articles=1, max_tokens=1024):
+def article_generator(words, num_articles=1, max_tokens=2048):
     openai.api_key    = os.getenv('OpenAI_API_KEY')
     generated_article = []
     for _ in range(num_articles):
@@ -52,3 +52,24 @@ def saving_csv(words, generated_articles):
             title = f"{words} article {generated_articles.index(article) + 1}"
             writer.writerow([title, article])
     print("Saved successfully!")
+
+def posting_tistory(title='No Tile', content='No Content'):
+    print('Title =', title)
+    url      = "https://www.tistory.com/apis/post/write?"
+    output   = "json"
+    blogName = "ossam1996"
+    
+    data = url
+    data += "access_token=" + os.getenv('Tistory_Secret_Key') + "&"
+    data += "output=" + output + "&"
+    data += "blogName=" + blogName + "&"
+    data += "title" + title + "&"
+    data += "content=" + content + "&"
+    # data += "category=vegetable"
+    
+    print(data)
+    res = requests.post(data)
+    
+    
+
+    
