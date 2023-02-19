@@ -1,11 +1,7 @@
-import openai
-import csv
-import yaml
 import utils
-import dotenv
-import os
 
-dotenv.load_dotenv(verbose=True) # if there is a missing file, show the warning.
+words = "How to lower blood sugar levels."
 
-cfg = os.environ['PAPAGO_SECRET']
-print(cfg)
+generated_articles = utils.article_generator(words)
+utils.saving_csv(generated_articles)
+
