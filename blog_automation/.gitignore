@@ -1,6 +1,7 @@
 # test
 .env
 .venv
+config.yaml
 env/venv/
 ENV/
 env.bak/

@@ -5,10 +5,7 @@ import utils
 import dotenv
 import os
 
-dotenv.load_dotenv()
+dotenv.load_dotenv(verbose=True) # if there is a missing file, show the warning.
 
-# yaml_path = 'config.yaml'
-# yaml_path = '.env'
-# cfg       = utils.open_config_file(yaml_path)
 cfg = os.getenv('OpenAI_API_KEY')
 print(cfg)
