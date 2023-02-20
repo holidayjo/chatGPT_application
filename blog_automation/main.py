@@ -2,7 +2,7 @@ import utils
 import pandas as pd
 
 # Pick the topic sentence.```
-words = "How to lower blood sugar levels."
+words = "To make a kid to read books."
 
 
 generated_articles = utils.article_generator(words, max_tokens=2048)
